@@ -9,6 +9,200 @@ html {
   font-family: "Space Mono", monospace;
 }
 
+body {
+  background-color: #f5f7ff;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1.9375rem;
+  margin-bottom: 2.25rem;
+}
+
+.header__container h1 {
+  font-size: 1.625rem;
+}
+
+.header__container .dark,
+.header__container .light {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1rem;
+  text-transform: uppercase;
+  color: #4b699b;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+}
+
+.header__container .light {
+  display: none;
+}
+
+.search__bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: #fefefe;
+  height: 3.75em;
+  border-radius: 15px;
+  padding: 0 1em;
+  margin-bottom: 1rem;
+}
+
+.search__bar ::-webkit-input-placeholder {
+  color: #4b699b;
+}
+
+.search__bar :-ms-input-placeholder {
+  color: #4b699b;
+}
+
+.search__bar ::-ms-input-placeholder {
+  color: #4b699b;
+}
+
+.search__bar ::placeholder {
+  color: #4b699b;
+}
+
+.search__bar img {
+  padding-right: 0.559375em;
+}
+
+.search__bar label {
+  width: 100%;
+}
+
+.search__bar input {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.search__bar button {
+  background-color: #0077ff;
+  color: #fefefe;
+  border: none;
+  outline: none;
+  padding: 1em;
+  font-family: inherit;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.main__container {
+  background-color: #fefefe;
+  border-radius: 15px;
+  padding: 2rem 1.5rem;
+}
+
+.main__container .gitHub__user--profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.1875rem;
+  margin-bottom: 2.125rem;
+}
+
+.main__container .gitHub__user--profile .icon img {
+  width: 70px;
+  border-radius: 50%;
+}
+
+.main__container .gitHub__user--profile .user__info .name {
+  color: #2a3341;
+  font-weight: 700;
+}
+
+.main__container .gitHub__user--profile .user__info .username {
+  color: #0077ff;
+}
+
+.main__container .gitHub__user--profile .user__info .joined {
+  color: #697c9b;
+}
+
+.main__container .bio {
+  font-size: 0.8125rem;
+  color: #4b699b;
+  margin-bottom: 1.4375rem;
+}
+
+.main__container .stats__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #f5f7ff;
+  padding: 1.125rem 0;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.main__container .stats__container .stats .stats__header {
+  color: #4b699b;
+  font-size: 0.6875rem;
+  margin-bottom: 0.5rem;
+}
+
+.main__container .stats__container .stats .stats__total {
+  font-weight: 700;
+}
+
+.main__container .info__container {
+  font-size: 0.8125rem;
+  color: #4b699b;
+}
+
+.main__container .info__container .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.203125rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.main__container .info__container .info a {
+  text-decoration: none;
+  color: #4b699b;
+}
+
+.main__container .info__container .info__location span {
+  padding-left: 0.35rem;
+}
+
 .attribution {
   margin-top: 1em;
   font-size: 11px;

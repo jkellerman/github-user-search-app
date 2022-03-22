@@ -1,5 +1,178 @@
 @import "resets", "variables";
 
+body {
+  background-color: $light-mode-background;
+  margin: 0 auto;
+  width: 90%;
+}
+
+// ============
+// header
+// ============
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.9375rem;
+  margin-bottom: 2.25rem;
+
+  h1 {
+    font-size: 1.625rem;
+  }
+
+  .dark,
+  .light {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    text-transform: uppercase;
+    color: $light-mode-text;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+  }
+
+  .light {
+    display: none;
+  }
+}
+
+// ============
+// search
+// ============
+
+.search__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: $white;
+  height: 3.75em;
+  border-radius: 15px;
+  padding: 0 1em;
+  margin-bottom: 1rem;
+
+  ::placeholder {
+    color: $light-mode-text;
+  }
+
+  img {
+    padding-right: 0.559375em;
+  }
+
+  label {
+    width: 100%;
+  }
+
+  input {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+
+  button {
+    background-color: $button;
+    color: $white;
+    border: none;
+    outline: none;
+    padding: 1em;
+    font-family: inherit;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+
+// ============
+// profile
+// ============
+
+.main__container {
+  background-color: $white;
+  border-radius: 15px;
+  padding: 2rem 1.5rem;
+
+  .gitHub__user--profile {
+    display: flex;
+    gap: 1.1875rem;
+    margin-bottom: 2.125rem;
+
+    .icon img {
+      width: 70px;
+      border-radius: 50%;
+    }
+
+    .user__info {
+      .name {
+        color: $light-mode-dark-text;
+        font-weight: 700;
+      }
+
+      .username {
+        color: $button;
+      }
+
+      .joined {
+        color: $grey-text;
+      }
+    }
+  }
+
+  .bio {
+    font-size: 0.8125rem;
+    color: $light-mode-text;
+    margin-bottom: 1.4375rem;
+  }
+
+  .stats__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-color: $light-mode-background;
+    padding: 1.125rem 0;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+
+    .stats {
+      .stats__header {
+        color: $light-mode-text;
+        font-size: 0.6875rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .stats__total {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .info__container {
+    font-size: 0.8125rem;
+    color: $light-mode-text;
+
+    .info {
+      display: flex;
+      gap: 1.203125rem;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      a {
+        text-decoration: none;
+        color: $light-mode-text;
+      }
+    }
+
+    .info__location span {
+      padding-left: 0.35rem;
+    }
+  }
+}
+
+// ============
+// footer
+// ============
+
 .attribution {
   margin-top: 1em;
   font-size: 11px;
