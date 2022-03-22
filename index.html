@@ -9,13 +9,89 @@
       sizes="32x32"
       href="./assets/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="dist/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Frontend Mentor | GitHub user search app</title>
   </head>
   <body>
-    <main></main>
-    devfinder Light Dark Search GitHub username... Search Joined Repos Followers
-    Following
+    <main>
+      <div class="header__container">
+        <h1>devfinder</h1>
+        <div class="theme__container">
+          <div class="light">
+            <p>light</p>
+            <img src="/assets/icon-sun.svg" alt="icon-sun" />
+          </div>
+          <div class="dark">
+            <p>dark</p>
+            <img src="/assets/icon-moon.svg" alt="icon-moon" />
+          </div>
+        </div>
+      </div>
+      <div class="search__bar">
+        <label for="search">
+          <img src="/assets/icon-search.svg" alt="icon-search" />
+          <input type="text" placeholder="Search GitHub username..." />
+          <button type="submit">Search</button>
+        </label>
+      </div>
+      <div class="profile__container">
+        <div class="gitHub__user--profile">
+          <div class="icon">
+            <img src="/assets/user.png" alt="user-profile" />
+          </div>
+          <div class="user__info">
+            <p class="name">The Octocat</p>
+            <p class="username">@octocat</p>
+            <p class="joined">Joined 25 Jan 2011</p>
+          </div>
+        </div>
+      </div>
+      <div class="bio__container">
+        <p class="bio">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+          laborum incidunt laudantium quas atque. Et!
+        </p>
+      </div>
+      <div class="stats__container">
+        <div class="stats">
+          <div class="stats__header">Repos</div>
+          <div class="stats__total">8</div>
+        </div>
+        <div class="stats">
+          <div class="stats__header">Followers</div>
+          <div class="stats__total">3938</div>
+        </div>
+        <div class="stats">
+          <div class="stats__header">Following</div>
+          <div class="stats__total">9</div>
+        </div>
+      </div>
+      <div class="info__container">
+        <div class="info info__location">
+          <img src="/assets/icon-location.svg" alt="icon-location" />
+          <span class="location">San Francisco</span>
+        </div>
+        <div class="info info__website">
+          <img src="/assets/icon-website.svg" alt="icon-website" />
+          <a class="website" href="https://github.blog">https://github.blog</a>
+        </div>
+        <div class="info info__twitter">
+          <img src="/assets/icon-twitter.svg" alt="icon-twitter" />
+          <a class="twitter" href="#">Not Available</a>
+        </div>
+        <div class="info info__company">
+          <img src="/assets/icon-company.svg" alt="icon-company" />
+          <a class="company" href="https://github.com/github">@github</a>
+        </div>
+      </div>
+    </main>
+
     <footer>
       <div class="attribution">
         Challenge by
