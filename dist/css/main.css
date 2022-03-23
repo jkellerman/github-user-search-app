@@ -115,8 +115,8 @@ body {
 
 .search__bar,
 .main__container {
-  -webkit-box-shadow: 0px 0px 15px 0px #9fb3d6;
-          box-shadow: 0px 0px 15px 0px #9fb3d6;
+  -webkit-box-shadow: 0px 6px 9px 0px #d5dff0;
+          box-shadow: 0px 6px 9px 0px #d5dff0;
 }
 
 .main__container {
