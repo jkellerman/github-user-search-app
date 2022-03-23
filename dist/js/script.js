@@ -61,6 +61,7 @@ const getUser = async (input) => {
       renderNotAvailable(location);
     } else {
       location.innerText = jsonResponse.location;
+      defaultStyles(location);
     }
     let website = document.querySelector(".website");
     if (jsonResponse.blog === "" || jsonResponse.blog === null) {
@@ -68,6 +69,7 @@ const getUser = async (input) => {
     } else {
       website.innerText = jsonResponse.blog;
       website.href = jsonResponse.blog;
+      defaultStyles(website);
     }
     let twitter = document.querySelector(".twitter");
     if (
@@ -78,6 +80,7 @@ const getUser = async (input) => {
     } else {
       twitter.innerText = jsonResponse.twitter_username;
       twitter.href = `https://twitter.com/${jsonResponse.twitter_username}`;
+      defaultStyles(twitter);
     }
     let company = document.querySelector(".company");
     if (jsonResponse.company === null || !jsonResponse.company.includes("@")) {
@@ -86,6 +89,7 @@ const getUser = async (input) => {
       company.innerText = jsonResponse.company;
       let gitPage = jsonResponse.company.replace(/\@/g, "");
       company.href = `https://github.com/${gitPage}`;
+      defaultStyles(company);
     }
   }
 };
@@ -107,4 +111,9 @@ function renderNotAvailable(element) {
   element.innerText = "Not Available";
   element.style.opacity = "0.5";
   element.style.pointerEvents = "none";
+}
+
+function defaultStyles(element) {
+  element.style.opacity = null;
+  element.style.pointerEvents = null;
 }
