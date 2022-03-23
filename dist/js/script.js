@@ -1,7 +1,12 @@
-const url = "https://api.github.com/users/octocat";
+const urlOctocat = "https://api.github.com/users/octocat";
+const button = document.querySelector("button");
+const input = document.querySelector("#search");
+const url = "https://api.github.com/users/";
 
-const getUser = async () => {
-  const response = await fetch(url);
+// get user
+const getUser = async (input) => {
+  let endPoint = `${url}${input}`;
+  const response = await fetch(endPoint);
   const jsonResponse = await response.json();
   if (response.ok) {
     console.log(jsonResponse);
@@ -85,7 +90,18 @@ const getUser = async () => {
   }
 };
 
-getUser();
+getUser("octocat");
+
+function test() {
+  console.log(jsonResponse);
+}
+
+button.addEventListener("click", () => {
+  let newInput = input.value;
+  if (!newInput == "") {
+    return getUser(newInput);
+  }
+});
 
 function renderNotAvailable(element) {
   element.innerText = "Not Available";
