@@ -69,6 +69,7 @@ body {
   border-radius: 15px;
   padding: 0 1em;
   margin-bottom: 1rem;
+  position: relative;
 }
 
 .search__bar ::-webkit-input-placeholder {
@@ -93,6 +94,7 @@ body {
 
 .search__bar label {
   width: 100%;
+  position: relative;
 }
 
 .search__bar input {
@@ -111,6 +113,15 @@ body {
   font-family: inherit;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.search__bar .error {
+  position: absolute;
+  right: 6rem;
+  font-size: 0.75rem;
+  color: #f74545;
+  font-weight: 700;
+  display: none;
 }
 
 .search__bar,
@@ -217,5 +228,11 @@ body {
 
 .attribution a {
   color: #3e52a3;
+}
+
+@media (min-width: 540px) {
+  .search__bar .error {
+    font-size: 0.9375rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

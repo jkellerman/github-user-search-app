@@ -51,6 +51,7 @@ body {
   border-radius: 15px;
   padding: 0 1em;
   margin-bottom: 1rem;
+  position: relative;
 
   ::placeholder {
     color: $light-mode-text;
@@ -62,6 +63,7 @@ body {
 
   label {
     width: 100%;
+    position: relative;
   }
 
   input {
@@ -80,6 +82,15 @@ body {
     font-family: inherit;
     border-radius: 10px;
     cursor: pointer;
+  }
+
+  .error {
+    position: absolute;
+    right: 6rem;
+    font-size: 0.75rem;
+    color: $error;
+    font-weight: 700;
+    display: none;
   }
 }
 
@@ -187,3 +198,5 @@ body {
     color: hsl(228, 45%, 44%);
   }
 }
+
+@import "tablet", "desktop";

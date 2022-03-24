@@ -1,16 +1,15 @@
-const urlOctocat = "https://api.github.com/users/octocat";
 const button = document.querySelector("button");
-const input = document.querySelector("#search");
+const inputField = document.querySelector("#search");
 const url = "https://api.github.com/users/";
+const noResult = document.querySelector([".error"]);
 
 // get user
 const getUser = async (input) => {
+  noResult.style.display = "none";
   let endPoint = `${url}${input}`;
   const response = await fetch(endPoint);
   const jsonResponse = await response.json();
   if (response.ok) {
-    console.log(jsonResponse);
-
     // get name
     let name = document.querySelector(".name");
     if (jsonResponse.name === "" || jsonResponse.name === null) {
@@ -91,17 +90,15 @@ const getUser = async (input) => {
       company.href = `https://github.com/${gitPage}`;
       defaultStyles(company);
     }
+  } else {
+    noResult.style.display = "block";
   }
 };
 
 getUser("octocat");
 
-function test() {
-  console.log(jsonResponse);
-}
-
 button.addEventListener("click", () => {
-  let newInput = input.value;
+  let newInput = inputField.value;
   if (!newInput == "") {
     return getUser(newInput);
   }
