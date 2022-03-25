@@ -57,8 +57,10 @@ body {
   margin-bottom: 1rem;
   position: relative;
 
-  ::placeholder {
+  ::placeholder,
+  ::-moz-placeholder {
     color: $light-mode-text;
+    opacity: 1;
   }
 
   img {

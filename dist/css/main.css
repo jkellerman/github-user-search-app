@@ -78,20 +78,10 @@ body {
   position: relative;
 }
 
-.search__bar ::-webkit-input-placeholder {
+.search__bar ::placeholder,
+.search__bar ::-moz-placeholder {
   color: #4b699b;
-}
-
-.search__bar :-ms-input-placeholder {
-  color: #4b699b;
-}
-
-.search__bar ::-ms-input-placeholder {
-  color: #4b699b;
-}
-
-.search__bar ::placeholder {
-  color: #4b699b;
+  opacity: 1;
 }
 
 .search__bar img {
