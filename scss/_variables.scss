@@ -1,16 +1,13 @@
+// light mode
 $button: hsl(212, 100%, 50%);
 $error: hsl(0, 92%, 62%);
-
-// Light Mode colors
-
-$grey-text: hsl(217, 20%, 51%);
-$light-mode-text: hsl(217, 35%, 45%);
-$light-mode-dark-text: hsl(217, 21%, 21%);
 $light-mode-background: hsl(227, 100%, 98%);
-$white: rgb(254, 254, 254);
+$light-mode-text: hsl(217, 35%, 45%);
+$light-mode-header: hsl(220, 18%, 16%);
+$light-mode-container: rgb(254, 254, 254);
+$light-mode-name: hsl(217, 21%, 21%);
+$light-mode-grey-text: hsl(217, 20%, 51%);
 
-// Dark Mode colors
-
-$dark-mode-text: hsl(0, 0%, 100%);
 $dark-mode-background: hsl(220, 40%, 13%);
-$dark-blue: hsl(222, 41%, 20%);
+$white: hsl(0, 0%, 100%);
+$dark-mode-container: hsl(222, 41%, 20%);

@@ -2,6 +2,7 @@
 
 body {
   background-color: $light-mode-background;
+  color: $light-mode-text;
   margin: 0 auto;
   width: 90%;
 }
@@ -19,15 +20,14 @@ body {
 
   h1 {
     font-size: 1.625rem;
+    color: $light-mode-header;
   }
-
   .dark,
   .light {
     display: flex;
     flex-direction: row;
     gap: 1rem;
     text-transform: uppercase;
-    color: $light-mode-text;
     letter-spacing: 2.5px;
     font-weight: 700;
   }
@@ -41,12 +41,16 @@ body {
 // search
 // ============
 
+.container {
+  background: $light-mode-container;
+  box-shadow: 0px 6px 9px 0px hsl(219, 48%, 89%);
+}
+
 .search__bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: $white;
   height: 3.75em;
   border-radius: 15px;
   padding: 0 1em;
@@ -67,10 +71,12 @@ body {
   }
 
   input {
+    background-color: $light-mode-container;
     font-family: inherit;
     width: 100%;
     border: none;
     outline: none;
+    color: $light-mode-header;
   }
 
   button {
@@ -98,13 +104,7 @@ body {
 // profile
 // ============
 
-.search__bar,
 .main__container {
-  box-shadow: 0px 6px 9px 0px hsl(219, 48%, 89%);
-}
-
-.main__container {
-  background-color: $white;
   border-radius: 15px;
   padding: 2rem 1.5rem;
 
@@ -120,7 +120,7 @@ body {
 
     .user__info {
       .name {
-        color: $light-mode-dark-text;
+        color: $light-mode-name;
         font-weight: 700;
       }
 
@@ -129,14 +129,13 @@ body {
       }
 
       .joined {
-        color: $grey-text;
+        color: $light-mode-grey-text;
       }
     }
   }
 
   .bio {
     font-size: 0.8125rem;
-    color: $light-mode-text;
     margin-bottom: 1.4375rem;
   }
 
@@ -152,13 +151,13 @@ body {
 
     .stats {
       .stats__header {
-        color: $light-mode-text;
         font-size: 0.6875rem;
         margin-bottom: 0.5rem;
       }
 
       .stats__total {
         font-weight: 700;
+        color: $light-mode-name;
       }
     }
   }
@@ -199,4 +198,4 @@ body {
   }
 }
 
-@import "tablet", "desktop";
+@import "tablet", "desktop", "dark";

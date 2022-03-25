@@ -6,7 +6,7 @@ const noResult = document.querySelector([".error"]);
 // get user
 const getUser = async (input) => {
   noResult.style.display = "none";
-  let endPoint = `${url}${input}`;
+  const endPoint = `${url}${input}`;
   const response = await fetch(endPoint);
   const jsonResponse = await response.json();
   if (response.ok) {
@@ -44,6 +44,7 @@ const getUser = async (input) => {
       bio.style.opacity = "0.5";
     } else {
       bio.innerText = jsonResponse.bio;
+      bio.style.opacity = null;
     }
 
     // get stats

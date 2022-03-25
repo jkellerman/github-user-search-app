@@ -11,6 +11,7 @@ html {
 
 body {
   background-color: #f5f7ff;
+  color: #4b699b;
   margin: 0 auto;
   width: 90%;
 }
@@ -31,6 +32,7 @@ body {
 
 .header__container h1 {
   font-size: 1.625rem;
+  color: #212630;
 }
 
 .header__container .dark,
@@ -44,13 +46,18 @@ body {
           flex-direction: row;
   gap: 1rem;
   text-transform: uppercase;
-  color: #4b699b;
   letter-spacing: 2.5px;
   font-weight: 700;
 }
 
 .header__container .light {
   display: none;
+}
+
+.container {
+  background: #fefefe;
+  -webkit-box-shadow: 0px 6px 9px 0px #d5dff0;
+          box-shadow: 0px 6px 9px 0px #d5dff0;
 }
 
 .search__bar {
@@ -64,7 +71,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  background-color: #fefefe;
   height: 3.75em;
   border-radius: 15px;
   padding: 0 1em;
@@ -98,15 +104,17 @@ body {
 }
 
 .search__bar input {
+  background-color: #fefefe;
   font-family: inherit;
   width: 100%;
   border: none;
   outline: none;
+  color: #212630;
 }
 
 .search__bar button {
   background-color: #0077ff;
-  color: #fefefe;
+  color: white;
   border: none;
   outline: none;
   padding: 1em;
@@ -124,14 +132,7 @@ body {
   display: none;
 }
 
-.search__bar,
 .main__container {
-  -webkit-box-shadow: 0px 6px 9px 0px #d5dff0;
-          box-shadow: 0px 6px 9px 0px #d5dff0;
-}
-
-.main__container {
-  background-color: #fefefe;
   border-radius: 15px;
   padding: 2rem 1.5rem;
 }
@@ -164,7 +165,6 @@ body {
 
 .main__container .bio {
   font-size: 0.8125rem;
-  color: #4b699b;
   margin-bottom: 1.4375rem;
 }
 
@@ -186,13 +186,13 @@ body {
 }
 
 .main__container .stats__container .stats .stats__header {
-  color: #4b699b;
   font-size: 0.6875rem;
   margin-bottom: 0.5rem;
 }
 
 .main__container .stats__container .stats .stats__total {
   font-weight: 700;
+  color: #2a3341;
 }
 
 .main__container .info__container {
@@ -233,6 +233,63 @@ body {
 @media (min-width: 540px) {
   .search__bar .error {
     font-size: 0.9375rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #141d2e;
+    color: white;
+  }
+  .header__container h1 {
+    color: white;
+  }
+  .header__container .light {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header__container .dark {
+    display: none;
+  }
+  .container {
+    background: #1e2b48;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .search__bar ::-webkit-input-placeholder {
+    color: white;
+  }
+  .search__bar :-ms-input-placeholder {
+    color: white;
+  }
+  .search__bar ::-ms-input-placeholder {
+    color: white;
+  }
+  .search__bar ::placeholder {
+    color: white;
+  }
+  .search__bar input {
+    background-color: #1e2b48;
+    color: white;
+  }
+  .main__container .gitHub__user--profile .user__info .name {
+    color: white;
+  }
+  .main__container .gitHub__user--profile .user__info .joined {
+    color: white;
+  }
+  .main__container .stats__container {
+    background-color: #141d2e;
+  }
+  .main__container .stats__container .stats .stats__total {
+    color: white;
+  }
+  .main__container .info__container {
+    color: white;
+  }
+  .main__container .info__container .info a {
+    color: white;
   }
 }
 /*# sourceMappingURL=main.css.map */
