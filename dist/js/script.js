@@ -1,9 +1,20 @@
 const button = document.querySelector("button");
 const inputField = document.querySelector("#search");
 const url = "https://api.github.com/users/";
-const noResult = document.querySelector([".error"]);
+const noResult = document.querySelector(".error");
+const toggleSwitch = document.querySelector(".theme__container");
+
+// toggleSwitch.addEventListener("click", () => {
+//   let media = window.matchMedia("(prefers-color-scheme:dark)");
+//   if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
+//     console.log(media);
+//   } else {
+//     console.log("false");
+//   }
+// });
 
 // get user
+
 const getUser = async (input) => {
   noResult.style.display = "none";
   const endPoint = `${url}${input}`;

@@ -22,18 +22,27 @@ body {
     font-size: 1.625rem;
     color: $light-mode-header;
   }
-  .dark,
-  .light {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    font-weight: 700;
-  }
 
-  .light {
-    display: none;
+  .theme__container {
+    cursor: pointer;
+
+    .dark,
+    .light {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-weight: 700;
+    }
+
+    .light {
+      display: none;
+    }
+
+    .light:hover {
+      color: $light-mode-grey-text;
+    }
   }
 }
 
@@ -200,4 +209,145 @@ body {
   }
 }
 
-@import "tablet", "desktop", "dark";
+.light__mode {
+  background-color: $light-mode-background;
+  color: $light-mode-text;
+
+  .header__container {
+    h1 {
+      color: $light-mode-header;
+    }
+    .theme__container {
+      .dark {
+        display: flex;
+      }
+
+      .light {
+        display: none;
+      }
+    }
+  }
+
+  .container {
+    background: $light-mode-container;
+    box-shadow: 0px 6px 9px 0px hsl(219, 48%, 89%);
+  }
+
+  .search__bar {
+    ::placeholder,
+    ::-moz-placeholder {
+      color: $light-mode-text;
+      opacity: 1;
+    }
+
+    input {
+      background-color: $light-mode-container;
+      color: $light-mode-header;
+    }
+  }
+
+  .main__container {
+    .gitHub__user--profile {
+      .user__info {
+        .name {
+          color: $light-mode-name;
+        }
+
+        .joined {
+          color: $light-mode-grey-text;
+        }
+      }
+    }
+    .stats__container {
+      background-color: $light-mode-background;
+
+      .stats {
+        .stats__total {
+          color: $light-mode-name;
+        }
+      }
+    }
+
+    .info__container {
+      color: $light-mode-text;
+
+      .info {
+        a {
+          color: $light-mode-text;
+        }
+      }
+    }
+  }
+}
+
+.dark__mode {
+  background-color: $dark-mode-background;
+  color: $white;
+
+  .header__container {
+    h1 {
+      color: $white;
+    }
+    .theme__container {
+      .light {
+        display: flex;
+      }
+
+      .dark {
+        display: none;
+        color: $light-mode-header;
+      }
+    }
+  }
+
+  .container {
+    background: $dark-mode-container;
+    box-shadow: none;
+  }
+
+  .search__bar {
+    ::placeholder {
+      color: $white;
+    }
+
+    input {
+      background-color: $dark-mode-container;
+      color: $white;
+    }
+  }
+
+  .main__container {
+    .gitHub__user--profile {
+      .user__info {
+        .name {
+          color: $white;
+        }
+
+        .joined {
+          color: $white;
+        }
+      }
+    }
+    .stats__container {
+      background-color: $dark-mode-background;
+
+      .stats {
+        .stats__total {
+          color: $white;
+        }
+      }
+    }
+
+    .info__container {
+      color: $white;
+
+      .info {
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@import "tablet", "desktop", "light", "dark";

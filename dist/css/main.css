@@ -35,8 +35,12 @@ body {
   color: #212630;
 }
 
-.header__container .dark,
-.header__container .light {
+.header__container .theme__container {
+  cursor: pointer;
+}
+
+.header__container .theme__container .dark,
+.header__container .theme__container .light {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,8 +54,12 @@ body {
   font-weight: 700;
 }
 
-.header__container .light {
+.header__container .theme__container .light {
   display: none;
+}
+
+.header__container .theme__container .light:hover {
+  color: #697c9b;
 }
 
 .container {
@@ -220,9 +228,190 @@ body {
   color: #3e52a3;
 }
 
+.light__mode {
+  background-color: #f5f7ff;
+  color: #4b699b;
+}
+
+.light__mode .header__container h1 {
+  color: #212630;
+}
+
+.light__mode .header__container .theme__container .dark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.light__mode .header__container .theme__container .light {
+  display: none;
+}
+
+.light__mode .container {
+  background: #fefefe;
+  -webkit-box-shadow: 0px 6px 9px 0px #d5dff0;
+          box-shadow: 0px 6px 9px 0px #d5dff0;
+}
+
+.light__mode .search__bar ::placeholder,
+.light__mode .search__bar ::-moz-placeholder {
+  color: #4b699b;
+  opacity: 1;
+}
+
+.light__mode .search__bar input {
+  background-color: #fefefe;
+  color: #212630;
+}
+
+.light__mode .main__container .gitHub__user--profile .user__info .name {
+  color: #2a3341;
+}
+
+.light__mode .main__container .gitHub__user--profile .user__info .joined {
+  color: #697c9b;
+}
+
+.light__mode .main__container .stats__container {
+  background-color: #f5f7ff;
+}
+
+.light__mode .main__container .stats__container .stats .stats__total {
+  color: #2a3341;
+}
+
+.light__mode .main__container .info__container {
+  color: #4b699b;
+}
+
+.light__mode .main__container .info__container .info a {
+  color: #4b699b;
+}
+
+.dark__mode {
+  background-color: #141d2e;
+  color: white;
+}
+
+.dark__mode .header__container h1 {
+  color: white;
+}
+
+.dark__mode .header__container .theme__container .light {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dark__mode .header__container .theme__container .dark {
+  display: none;
+  color: #212630;
+}
+
+.dark__mode .container {
+  background: #1e2b48;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.dark__mode .search__bar ::-webkit-input-placeholder {
+  color: white;
+}
+
+.dark__mode .search__bar :-ms-input-placeholder {
+  color: white;
+}
+
+.dark__mode .search__bar ::-ms-input-placeholder {
+  color: white;
+}
+
+.dark__mode .search__bar ::placeholder {
+  color: white;
+}
+
+.dark__mode .search__bar input {
+  background-color: #1e2b48;
+  color: white;
+}
+
+.dark__mode .main__container .gitHub__user--profile .user__info .name {
+  color: white;
+}
+
+.dark__mode .main__container .gitHub__user--profile .user__info .joined {
+  color: white;
+}
+
+.dark__mode .main__container .stats__container {
+  background-color: #141d2e;
+}
+
+.dark__mode .main__container .stats__container .stats .stats__total {
+  color: white;
+}
+
+.dark__mode .main__container .info__container {
+  color: white;
+}
+
+.dark__mode .main__container .info__container .info a {
+  color: white;
+}
+
 @media (min-width: 540px) {
   .search__bar .error {
     font-size: 0.9375rem;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #f5f7ff;
+    color: #4b699b;
+  }
+  .header__container h1 {
+    color: #212630;
+  }
+  .header__container .theme__container .dark {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header__container .theme__container .light {
+    display: none;
+  }
+  .container {
+    background: #fefefe;
+    -webkit-box-shadow: 0px 6px 9px 0px #d5dff0;
+            box-shadow: 0px 6px 9px 0px #d5dff0;
+  }
+  .search__bar ::placeholder,
+  .search__bar ::-moz-placeholder {
+    color: #4b699b;
+    opacity: 1;
+  }
+  .search__bar input {
+    background-color: #fefefe;
+    color: #212630;
+  }
+  .main__container .gitHub__user--profile .user__info .name {
+    color: #2a3341;
+  }
+  .main__container .gitHub__user--profile .user__info .joined {
+    color: #697c9b;
+  }
+  .main__container .stats__container {
+    background-color: #f5f7ff;
+  }
+  .main__container .stats__container .stats .stats__total {
+    color: #2a3341;
+  }
+  .main__container .info__container {
+    color: #4b699b;
+  }
+  .main__container .info__container .info a {
+    color: #4b699b;
   }
 }
 
@@ -234,12 +423,12 @@ body {
   .header__container h1 {
     color: white;
   }
-  .header__container .light {
+  .header__container .theme__container .light {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .header__container .dark {
+  .header__container .theme__container .dark {
     display: none;
   }
   .container {
