@@ -241,6 +241,14 @@ body {
   color: #4b699b;
 }
 
+.main__container .info__container .info .website:hover,
+.main__container .info__container .info .twitter:hover,
+.main__container .info__container .info .company:hover {
+  text-decoration: underline;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
 .main__container .info__container .info__location span {
   padding-left: 0.35rem;
 }

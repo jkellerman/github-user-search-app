@@ -209,6 +209,12 @@ body {
         text-decoration: none;
         color: $light-mode-text;
       }
+      .website:hover,
+      .twitter:hover,
+      .company:hover {
+        text-decoration: underline;
+        transition: 0.2s ease-in-out;
+      }
     }
 
     .info__location span {
