@@ -110,7 +110,6 @@ button.addEventListener("click", () => {
 });
 
 toggleSwitch.addEventListener("click", () => {
-  // toggle dark mode if there is no color scheme preference
   let body = document.querySelector("body");
   //   if dark mode preferred
   if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
@@ -121,6 +120,7 @@ toggleSwitch.addEventListener("click", () => {
     body.classList.remove("light__mode");
     body.classList.toggle("dark__mode");
   } else {
+    // toggle dark mode if there is no color scheme preference
     body.classList.toggle("dark__mode");
   }
 });
