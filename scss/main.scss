@@ -116,6 +116,7 @@ body {
     font-family: inherit;
     border-radius: 10px;
     cursor: pointer;
+    margin-left: 0.3rem;
   }
 
   button:hover {
@@ -125,7 +126,7 @@ body {
 
   .error {
     position: absolute;
-    right: 6rem;
+    right: 5.5rem;
     font-size: 0.75rem;
     color: $error;
     font-weight: 700;

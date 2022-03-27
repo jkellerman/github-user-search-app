@@ -4,8 +4,12 @@
     width: 75%;
   }
   .search__bar {
+    button {
+      padding: 1em 1.75em;
+    }
     .error {
       font-size: 0.9375rem;
+      right: 7rem;
     }
   }
   .main__container {

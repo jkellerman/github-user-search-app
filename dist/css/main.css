@@ -140,6 +140,7 @@ body {
   font-family: inherit;
   border-radius: 10px;
   cursor: pointer;
+  margin-left: 0.3rem;
 }
 
 .search__bar button:hover {
@@ -150,7 +151,7 @@ body {
 
 .search__bar .error {
   position: absolute;
-  right: 6rem;
+  right: 5.5rem;
   font-size: 0.75rem;
   color: #f74545;
   font-weight: 700;
@@ -413,8 +414,12 @@ body {
     margin-top: 8.75rem;
     width: 75%;
   }
+  .search__bar button {
+    padding: 1em 1.75em;
+  }
   .search__bar .error {
     font-size: 0.9375rem;
+    right: 7rem;
   }
   .main__container {
     padding: 2rem 2.5625rem;
@@ -582,6 +587,10 @@ body {
   }
   .search__bar button {
     padding: 1em 1.75em;
+  }
+  .search__bar .error {
+    font-size: 0.9375rem;
+    right: 7rem;
   }
   .main__container {
     display: -webkit-box;
