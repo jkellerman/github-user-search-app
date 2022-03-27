@@ -141,6 +141,12 @@ body {
   cursor: pointer;
 }
 
+.search__bar button:hover {
+  background-color: #61abff;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
 .search__bar .error {
   position: absolute;
   right: 6rem;
