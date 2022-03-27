@@ -100,6 +100,8 @@ const getUser = async (input) => {
 
 getUser("octocat");
 
+// get user when search button is clicked
+
 button.addEventListener("click", () => {
   let newInput = inputField.value;
   if (!newInput == "") {
