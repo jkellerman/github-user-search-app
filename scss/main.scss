@@ -42,6 +42,12 @@ body {
 
     .light:hover {
       color: $light-mode-grey-text;
+      transition: 0.2s ease-in-out;
+    }
+
+    .dark:hover {
+      color: $light-mode-header;
+      transition: 0.2s ease-in-out;
     }
   }
 }

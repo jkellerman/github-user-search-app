@@ -60,6 +60,14 @@ body {
 
 .header__container .theme__container .light:hover {
   color: #697c9b;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.header__container .theme__container .dark:hover {
+  color: #212630;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .container {
