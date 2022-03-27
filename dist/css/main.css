@@ -101,7 +101,7 @@ body {
   width: 100%;
   height: 3.75em;
   border-radius: 15px;
-  padding: 0 1em;
+  padding: 0 0.5em 0 1em;
   margin-bottom: 1rem;
   position: relative;
 }
@@ -409,6 +409,10 @@ body {
 }
 
 @media (min-width: 540px) {
+  body {
+    margin-top: 8.75rem;
+    width: 75%;
+  }
   .search__bar .error {
     font-size: 0.9375rem;
   }
