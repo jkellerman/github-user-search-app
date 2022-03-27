@@ -234,8 +234,7 @@ body {
   }
 
   .search__bar {
-    ::placeholder,
-    ::-moz-placeholder {
+    ::placeholder {
       color: $light-mode-text;
       opacity: 1;
     }

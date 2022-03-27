@@ -4,14 +4,20 @@ const url = "https://api.github.com/users/";
 const noResult = document.querySelector(".error");
 const toggleSwitch = document.querySelector(".theme__container");
 
-// toggleSwitch.addEventListener("click", () => {
-//   let media = window.matchMedia("(prefers-color-scheme:dark)");
-//   if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
-//     console.log(media);
-//   } else {
-//     console.log("false");
-//   }
-// });
+toggleSwitch.addEventListener("click", () => {
+  // toggle dark mode if there is no color scheme preference
+  let body = document.querySelector("body");
+  body.classList.toggle("dark__mode");
+  //   if dark mode preferred
+  if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
+    body.classList.remove("dark__mode");
+    body.classList.toggle("light__mode");
+    // if light mode preferred
+  } else if (window.matchMedia("(prefers-color-scheme:light)").matches) {
+    body.classList.remove("light__mode");
+    body.classList.toggle("dark__mode");
+  }
+});
 
 // get user
 
