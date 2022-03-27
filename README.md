@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://github.com/jkellerman/github-user-search-app)
+- Live Site URL: [Live](https://jkellerman.github.io/github-user-search-app/)
 
 ## My process
 
@@ -43,11 +43,7 @@ Users should be able to:
 
 ### What I learned
 
-Some new things, I learned in this project was how to have the correct color scheme chosen based on the users computer preferences.
-
-I also learned how to change the color of placeholder text in firefox.
-
-I also learned how to reformat a date.
+Some new things I learned in this project was how to have the correct color scheme chosen based on the users computer preferences.I also learned how to change the color of placeholder text in firefox and I learned how to reformat a date.
 
 See code snippets below:
 
@@ -75,7 +71,7 @@ console.log(dtFormat.format(date));
 
 ### Continued development
 
-In future projects, I would like to focus on how save the selected color scheme in local storage.
+In future projects, I would like to focus on how to save the selected color scheme in local storage.
 
 ### Useful resources
 
