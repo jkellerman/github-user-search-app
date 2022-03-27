@@ -45,8 +45,18 @@ body {
       transition: 0.2s ease-in-out;
     }
 
+    .light:hover > .sun g {
+      fill: $light-mode-grey-text;
+      transition: 0.2s ease-in-out;
+    }
+
     .dark:hover {
       color: $light-mode-header;
+      transition: 0.2s ease-in-out;
+    }
+
+    .dark:hover > .moon path {
+      fill: $light-mode-header;
       transition: 0.2s ease-in-out;
     }
   }

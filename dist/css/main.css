@@ -64,8 +64,20 @@ body {
   transition: 0.2s ease-in-out;
 }
 
+.header__container .theme__container .light:hover > .sun g {
+  fill: #697c9b;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
 .header__container .theme__container .dark:hover {
   color: #212630;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.header__container .theme__container .dark:hover > .moon path {
+  fill: #212630;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
