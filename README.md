@@ -39,7 +39,7 @@ Users should be able to:
 - HTML5 markup
 - SCSS
 - Mobile-first workflow
-- ES8 JS
+- Vanilla JavaScript
 
 ### What I learned
 

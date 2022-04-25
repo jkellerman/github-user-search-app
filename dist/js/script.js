@@ -13,7 +13,7 @@ const getUser = async (input) => {
   const jsonResponse = await response.json();
   if (response.ok) {
     // get name
-    let name = document.querySelector(".name");
+    const name = document.querySelector(".name");
     if (jsonResponse.name === "" || jsonResponse.name === null) {
       name.innerText = jsonResponse.login.replace(/\@/g, "");
     } else {
@@ -21,26 +21,27 @@ const getUser = async (input) => {
     }
 
     // get username
-    let username = (document.querySelector(
+    const username = (document.querySelector(
       ".username"
     ).innerText = `@${jsonResponse.login}`);
 
     // get date joined
-    let dateJoined = document.querySelector(".joined");
-    let date = new Date(jsonResponse.created_at);
-    let dtFormat = new Intl.DateTimeFormat("en-GB", {
+    const dateJoined = document.querySelector(".joined");
+    const date = new Date(jsonResponse.created_at);
+    const dtFormat = new Intl.DateTimeFormat("en-GB", {
       day: "2-digit",
       month: "short",
       year: "numeric",
     });
-    let newDate = dtFormat.format(date);
+    const newDate = dtFormat.format(date);
     dateJoined.innerText = `Joined ${newDate}`;
 
     // get image icon
-    let icon = (document.querySelector("#icon").src = jsonResponse.avatar_url);
+    const icon = (document.querySelector("#icon").src =
+      jsonResponse.avatar_url);
 
     // get bio
-    let bio = document.querySelector(".bio");
+    const bio = document.querySelector(".bio");
     if (jsonResponse.bio === "" || jsonResponse.bio === null) {
       bio.innerText = "This profile has no bio";
       bio.style.opacity = "0.5";
@@ -50,22 +51,22 @@ const getUser = async (input) => {
     }
 
     // get stats
-    let repos = (document.querySelector(".repos").innerText =
+    const repos = (document.querySelector(".repos").innerText =
       jsonResponse.public_repos);
-    let followers = (document.querySelector(".followers").innerText =
+    const followers = (document.querySelector(".followers").innerText =
       jsonResponse.followers);
-    let following = (document.querySelector(".following").innerText =
+    const following = (document.querySelector(".following").innerText =
       jsonResponse.following);
 
     // get info
-    let location = document.querySelector(".location");
+    const location = document.querySelector(".location");
     if (jsonResponse.location === "" || jsonResponse.location === null) {
       renderNotAvailable(location);
     } else {
       location.innerText = jsonResponse.location;
       defaultStyles(location);
     }
-    let website = document.querySelector(".website");
+    const website = document.querySelector(".website");
     if (jsonResponse.blog === "" || jsonResponse.blog === null) {
       renderNotAvailable(website);
     } else {
@@ -73,7 +74,7 @@ const getUser = async (input) => {
       website.href = jsonResponse.blog;
       defaultStyles(website);
     }
-    let twitter = document.querySelector(".twitter");
+    const twitter = document.querySelector(".twitter");
     if (
       jsonResponse.twitter_username === "" ||
       jsonResponse.twitter_username === null
@@ -84,7 +85,7 @@ const getUser = async (input) => {
       twitter.href = `https://twitter.com/${jsonResponse.twitter_username}`;
       defaultStyles(twitter);
     }
-    let company = document.querySelector(".company");
+    const company = document.querySelector(".company");
     if (jsonResponse.company === null || !jsonResponse.company.includes("@")) {
       renderNotAvailable(company);
     } else {
@@ -103,14 +104,14 @@ getUser("octocat");
 // get user when search button is clicked
 
 button.addEventListener("click", () => {
-  let newInput = inputField.value;
+  const newInput = inputField.value;
   if (!newInput == "") {
     return getUser(newInput);
   }
 });
 
 toggleSwitch.addEventListener("click", () => {
-  let body = document.querySelector("body");
+  const body = document.querySelector("body");
   //   if dark mode preferred
   if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
     body.classList.remove("dark__mode");
