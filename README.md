@@ -73,6 +73,8 @@ console.log(dtFormat.format(date));
 
 In future projects, I would like to focus on how to save the selected color scheme in local storage.
 
+Edit - LocalStorage has now been implemented
+
 ### Useful resources
 
 - [YouTube](https://www.youtube.com/watch?v=C2XgmxhVZP8) - This helped me with reformatting dates.

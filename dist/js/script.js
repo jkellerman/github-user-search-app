@@ -3,7 +3,9 @@ const inputField = document.querySelector("#search");
 const url = "https://api.github.com/users/";
 const noResult = document.querySelector(".error");
 const toggleSwitch = document.querySelector(".theme__container");
-
+const LOCAL_STORAGE_PREFIX = "GH_SEARCH_APP";
+const THEME_STORAGE_KEY = `${LOCAL_STORAGE_PREFIX}-theme`;
+const body = document.querySelector("body");
 // get user
 
 const getUser = async (input) => {
@@ -110,19 +112,35 @@ button.addEventListener("click", () => {
   }
 });
 
+// Theme switch
+
+let theme = JSON.parse(localStorage.getItem(THEME_STORAGE_KEY)) || "";
+if (theme == JSON.parse(localStorage.getItem(THEME_STORAGE_KEY))) {
+  body.classList.add(`${theme}__mode`);
+} else {
+  body.classList.remove(`${theme}__mode`);
+}
 toggleSwitch.addEventListener("click", () => {
-  const body = document.querySelector("body");
-  //   if dark mode preferred
   if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
-    body.classList.remove("dark__mode");
     body.classList.toggle("light__mode");
-    // if light mode preferred
-  } else if (window.matchMedia("(prefers-color-scheme:light)").matches) {
-    body.classList.remove("light__mode");
+    if (body.classList.contains("light__mode")) {
+      theme = "light";
+      saveTheme();
+    } else {
+      theme = "";
+      removeTheme();
+      body.classList.remove("light__mode");
+    }
+  } else if (!window.matchMedia("(prefers-color-scheme:dark)").matches) {
     body.classList.toggle("dark__mode");
-  } else {
-    // toggle dark mode if there is no color scheme preference
-    body.classList.toggle("dark__mode");
+    if (body.classList.contains("dark__mode")) {
+      theme = "dark";
+      saveTheme();
+    } else {
+      theme = "";
+      removeTheme();
+      body.classList.remove("dark__mode");
+    }
   }
 });
 
@@ -135,4 +153,12 @@ function renderNotAvailable(element) {
 function defaultStyles(element) {
   element.style.opacity = null;
   element.style.pointerEvents = null;
+}
+
+function saveTheme() {
+  localStorage.setItem(THEME_STORAGE_KEY, JSON.stringify(theme));
+}
+
+function removeTheme() {
+  localStorage.removeItem(THEME_STORAGE_KEY);
 }

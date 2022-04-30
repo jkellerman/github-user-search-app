@@ -1,4 +1,8 @@
-@import "resets", "variables";
+@use "./resets";
+@use "./variables";
+@use "./dark";
+@use "./light";
+@use "./tablet";
 
 body {
   background-color: $light-mode-background;
@@ -383,6 +387,5 @@ body {
   }
 }
 
-@import "tablet", "light", "dark";
-
-@import "desktop";
+@use "tablet";
+@use "desktop";
